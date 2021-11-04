@@ -1,0 +1,53 @@
+GET http://localhost:3500/api/estudiantes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRmNjE2ODQ5YmQ0MWNjNDU1OGIyNmEiLCJjb3JyZW8iOiJqb3NlLm1vcmFAcHJvZmVzb3IuY29tIiwiaWF0IjoxNjMyNzQwMzE4LCJleHAiOjE2MzI3NDM5MTh9.K13xcEC9k2ZT_s4uUVu3b9qzLHNyHM171yhxJydvppI
+
+###
+POST http://localhost:3500/api/estudiantes
+Content-Type: application/json
+
+        {
+            "funcionario": "51127029",
+            "tipo": "B",
+            "hora": "17:30",
+            "materias": {
+                "nombre": "Matematicas",
+                "nota": 100,
+                "comentario": "Brillante"
+            }
+        }
+
+###
+PUT http://localhost:3500/api/estudiantes/614f3c8a721a3d807f29aed1
+Content-Type: application/json
+
+{
+    "tipo": "C"
+}
+###
+DELETE http://localhost:3500/api/estudiantes/614f3c59721a3d807f29aecf
+
+// ------- MATERIAS
+###
+GET http://localhost:3500/api/materias/614f41985b95520b614bc03a
+
+###
+POST http://localhost:3500/api/materias/614f41985b95520b614bc03a
+Content-Type: application/json
+           
+ {
+    "nombre": "Ingles",
+    "nota": 80,
+    "comentario": "Pobre"
+ } 
+
+###
+DELETE http://localhost:3500/api/materias/614f41985b95520b614bc03a/614f4de9ad7813494986666a
+
+###
+PUT  http://localhost:3500/api/materias/614f41985b95520b614bc03a/614f5537b77594c4cce8d701
+Content-Type: application/json
+
+{
+    "nota": 50,
+    "comentario":"Debe un trabajo todavia" 
+}
